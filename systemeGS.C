@@ -87,7 +87,6 @@ scanf("%d", &choix);
                         
                     };
                     }
-
                     break;
 
                     case 4:{
@@ -125,16 +124,17 @@ scanf("%d", &choix);
                             scanf("%d", &reponse);
                             if (reponse == 1){
 
-                                //*N[] = false;
-                                //here is the probleme
-
+                                        //*N[] = false;
+                                        //here is the probleme
+                                
                                 int i = *N[i].titre;
-                              for ( i = *N[i].titre; i < nLivre -  1; i++){
+                                for ( int j = *N[i].titre; j < nLivre -  1; j++){
                                 N[i] = N[i+1];
+                                j = j++;
                             
-                              }
-                              nLivre--;
-                              
+                            }
+                            nLivre--;
+                            
                             }
                             else if (reponse == 2){
                                 goto MENU;
@@ -149,7 +149,7 @@ scanf("%d", &choix);
                     }
                     break;
                     case 6:{
-                        printf("----------------------\n");
+                        printf("-----------------------\n");
                         printf("\n==>Mettre a jour la quantite d'un livre: || %d ||\n", nLivre);
                         printf("\n----------------------\n");
                     }
